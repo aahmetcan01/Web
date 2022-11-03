@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<style>
+.row{
+    text-align: center;
+}
+.col-md-6{
+    width: 48%;
+    display: inline-block;
+}
+.row2{
+    text-align: center;
+}
+
+</style>
+<body>
+<br>
+    <div class="row">
+   
+   
+       <div class="col-md-6">
+        <label for="input">A sayısını giriniz</label>
+        <br>
+        <input type="text" id="a">
+    </div>
+        <div class="col-md-6">
+            <label for="input">B sayısını giriniz</label>
+            <br>
+            <input type="text" id="b" >
+        </div>
+        <div>
+            <label for="">Sonuç</label>
+            <input type="text" id="textboxresult" >
+        </div>
+    
+</div>
+<br>
+<div class="row2">
+     <button class="islemler" id="topla"onclick="topla()" value="+">+</button>
+     <button class="islemler" id="cikar"onclick="cikar()" value="-">-</button>
+     <button class="islemler" id="carp" onclick="carp()" value="*">*</button>
+     <button class="islemler" id="bol"  onclick="bol()" value="/">/</button>
+
+</div>
+
+
+    
+</body>
+<script>
+   var num1,num2;
+   function topla(){
+    num1=document.getElementById("a").value;
+    num2=document.getElementById("b").value;   
+    textboxresult.value=parseInt(num1)+parseInt(num2);}
+
+    function cikar(){
+    num1=document.getElementById("a").value;
+    num2=document.getElementById("b").value;   
+    textboxresult.value=parseInt(num1)-parseInt(num2);}
+
+    function carp(){
+    num1=document.getElementById("a").value;
+    num2=document.getElementById("b").value;   
+    textboxresult.value=parseFloat(num1)*parseFloat(num2);}
+
+    function bol(){
+    num1=document.getElementById("a").value;
+    num2=document.getElementById("b").value;   
+    textboxresult.value=parseFloat(num1)/parseFloat(num2);}
+
+
+</script>
+</html>
